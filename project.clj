@@ -10,4 +10,7 @@
   
   :target-path "target/%s"
   
-  :profiles {:uberjar {:aot :all}})
+  :profiles {:uberjar {:aot :all}
+             :dev {:source-paths ["dev"]
+                   :repl-options {:init-ns user}
+                   :dependencies [[org.clojure/tools.namespace "0.2.11"]]}})
