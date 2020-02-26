@@ -8,8 +8,8 @@
                  [org.clojure/core.async "1.0.567"]
                  [org.clojure/data.json "1.0.0"]
 
-                 [io.pedestal/pedestal.service "0.5.1"]
-                 [io.pedestal/pedestal.jetty "0.5.1"]
+                 [io.pedestal/pedestal.service "0.5.7"]
+                 [io.pedestal/pedestal.jetty "0.5.7"]
 
                  [mount "0.1.11"]
                  [wrench "0.3.3"]
