@@ -1,6 +1,6 @@
 (ns toolbox.core-test
   (:require [clojure.test :refer :all]
-            [toolbox.core :refer :all]))
+            [toolbox.main :refer :all]))
 
 (deftest a-test
   (testing "I don't fail anymore!"
