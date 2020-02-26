@@ -11,9 +11,11 @@
                  [io.pedestal/pedestal.service "0.5.7"]
                  [io.pedestal/pedestal.jetty "0.5.7"]
 
-                 [mount "0.1.11"]
+                 [mount "0.1.16"]
                  [wrench "0.3.3"]
                  [clj-http "3.10.0"]]
+
+  :min-lein-version "2.0.0"
 
   :main ^:skip-aot toolbox.main
   :uberjar-name "toolbox.jar"
