@@ -3,8 +3,8 @@
             [geheimtur.util.auth :as geheimtur]
             [wrench.core :as cfg]))
 
-(cfg/def client-id)
-(cfg/def client-secret)
+(cfg/def client-id {:require true})
+(cfg/def client-secret {:require true})
 
 (defn on-google-success
   [_ {:keys [identity return]}]

@@ -4,7 +4,8 @@
             [mount.core :as mount]
             [toolbox.http-server :as http]
             [taoensso.timbre :as log]
-            [timbre-ns-pattern-level :as ns-pattern]))
+            [timbre-ns-pattern-level :as ns-pattern]
+            [wrench.core :as cfg]))
 
 (def log-levels
   {"org.eclipse.jetty*" :info
@@ -17,7 +18,10 @@
 (defonce running (a/chan))
 
 (defn -main [& _args]
-  (println "Starting toolbox")
+  (log/info "Starting toolbox")
+  (when-not (cfg/validate-and-log)
+    (System/exit 1))
+
   (mount/start #'http/server)
 
   (a/<!! running))
