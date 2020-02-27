@@ -7,7 +7,10 @@
   {:status 200
    :body   "ok"})
 
+(def user (atom nil))
+
 (defn me [request]
+  (reset! user (auth/get-identity request))
   {:status 200
    :body   {:user (auth/get-identity request)}})
 
