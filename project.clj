@@ -3,19 +3,23 @@
   :url "https://github.com/Otann/toolbox"
   :license {:name "EPL-2.0 OR GPL-2.0-or-later WITH Classpath-exception-2.0"
             :url  "https://www.eclipse.org/legal/epl-2.0/"}
-
+  :min-lein-version "2.0.0"
   :dependencies [[org.clojure/clojure "1.10.0"]
                  [org.clojure/core.async "1.0.567"]
                  [org.clojure/data.json "1.0.0"]
 
                  [io.pedestal/pedestal.service "0.5.7"]
                  [io.pedestal/pedestal.jetty "0.5.7"]
+                 [geheimtur "0.4.0"]
 
+                 [com.taoensso/timbre "4.10.0"]
+                 [com.fzakaria/slf4j-timbre "0.3.19"]
+                 [timbre-ns-pattern-level "0.1.2"]
+
+                 [hiccup "1.0.5"]
                  [mount "0.1.16"]
                  [wrench "0.3.3"]
                  [clj-http "3.10.0"]]
-
-  :min-lein-version "2.0.0"
 
   :main ^:skip-aot toolbox.main
   :uberjar-name "toolbox.jar"
